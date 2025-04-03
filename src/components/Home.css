@@ -36,9 +36,10 @@ body {
      width: 100%;
      padding: 10px 40px; 
      border: 1px solid #ccc;
-     border-radius: 5px;
+     border-radius: 15px;
      outline: none;
      font-size: 16px;
+     height: 5px;
    }
    
    .search-icon {
@@ -92,8 +93,8 @@ body {
      color: yellow;
    }
    .category-buttons{
-     display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: grid;
+  grid-template-columns: repeat(2, 6fr);
   gap: 15px;
   max-width: 300px;
    }
@@ -103,44 +104,104 @@ body {
      padding: 12px;
   border: none;
   cursor: pointer;
-  background: #444;
+  background:#444;
   color: white;
-  border-radius: 5px;
   width: 140px;
   text-align: center;
   font-size: 16px;
-  box-shadow: 2px 2px 8px rgba(19, 227, 23, 0.3);
-  transition: 0.3s;
-
+  box-shadow: 5px  4px 10px rgba(255, 255, 255, 0.3), 
+  0px 6px 20px rgba(255, 255, 255, 0.5); 
+  transition: all 0.3s ease-in-out;
+  
    }
    .movies-section {
      margin: 20px 0;
    }
    .movies-section h2{
      color: black;
-     margin-left: 20px;
+     /* margin-left: 10px; */
+     text-align: left;
    }
    .movies-list {
      display: flex;
      gap: 15px;
+     scrollbar-width:none;
      overflow-x: auto;
      padding-bottom: 10px;
    }
    .movie-card {
-     flex: 0 0 auto;
+    flex: 0 0 auto;
      width: 300px;
      text-align: center;
+     position: relative;
    }
+   .image-container{
+    position: relative;
+   }
+   .movie-card .movie-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+}
    .movie-card p{
      color: black;
+     font-size: 16px;
+     text-align: left;
+     margin: 5px 0 2px 0;
    }
    .movie-card span{
      color: black;
+     font-size: 16px;
+     margin-top: -3px;
+
    }
    .movie-card img {
      width: 100%;
      border-radius: 5px;
    }
+   .newly-released{
+    margin: 20px 0;
+
+   }
+   .newly-released {
+    text-align: center;
+    margin-top: 30px;
+    width: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  }
+  .newly-released h2{
+    color: black;
+    /* margin-left: 10px; */
+    text-align: left;
+    padding-left:0px;
+
+  }
+  
+  .newly-released-card {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .newly-released-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+  }
+  
+  .copyright p {
+    font-size: 20px;
+    color:black;
+    text-align: center;
+    margin-top: 20px;
+    padding-bottom: 10px;
+    text-align: left;
+  }
+  
 
    /* Mobile responsive */
    @media (max-width: 480px) {
@@ -186,4 +247,33 @@ body {
           width: 100%; 
           max-width: 140px; 
         }
+        @media (max-width: 768px) {
+          .newly-released {
+            padding: 15px;
+            margin-top: 20px;
+          }
+        
+          .newly-released h2 {
+            font-size: 18px;
+            margin-left: 5px;
+          }
+        
+          .newly-released-card {
+            width: 90%;
+            margin: auto;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+          }
+        
+          .newly-released-card img {
+            width: 100%;
+            height: auto;
+          }
+        
+          .copyright p {
+            font-size: 16px;
+            text-align: center;
+            padding-bottom: 5px;
+          }
+        }
+        
    }

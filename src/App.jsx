@@ -1,12 +1,14 @@
 import './App.css'
-import Home from './components/Home'
+import Moviedetails from './components/Moviedetails'
+
+// import Home from './components/Home'
 // import Login from './components/Login'
 
 function App() {
   return (
     <>
-    <Home ></Home>
-    {/* <Login /> */}
+    {/* <Home /> */}
+    <Moviedetails />
    </>
   )
 }

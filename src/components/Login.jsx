@@ -1,10 +1,13 @@
 import React from 'react'
+// import { useNavigate } from 'react-router-dom'; 
+
 import { useState } from 'react'
 import '../components/Login.css'
 
 const Login = () => {
      const [email,setEmail]=useState("");
      const [password, setPassword] = useState("");
+    //  const navigate = useNavigate(); 
  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
  const handleSubmit = (e)=>{
      e.preventDefault();
@@ -18,8 +21,10 @@ const Login = () => {
         }
         
         alert("Login Successfully");
- }
+        // navigate('/Day2Task'); 
 
+ }
+console.log("Loggin components rendered");
   return (
      <div className="login-container">
      <h1 className="logo">BINGO</h1>
